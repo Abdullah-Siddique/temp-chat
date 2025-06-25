@@ -36,6 +36,8 @@ io.on('connection', (socket) => {
         // Let the joining user know they are waiting if they are the first
         if (numClients === 0) {
             socket.emit('waiting');
+        } else {
+            socket.emit('startChat'); // Enable chat for second user
         }
     });
 

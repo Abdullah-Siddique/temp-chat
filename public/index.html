@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TempChat - Create a Chat</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Welcome to TempChat</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container centered">
         <h1>Welcome to TempChat</h1>
         <p>Create a secure, temporary chat room. Your conversation is deleted forever when you leave.</p>
-        <button id="create-chat-btn">Create a New Chat</button>
+        <a href="/chat.html?room=${Math.random().toString(36).substring(2, 15)}"><button>Create a New Chat</button></a>
     </div>
-
-    <script>
-        document.getElementById('create-chat-btn').addEventListener('click', () => {
-            // Generate a unique room ID
-            const roomId = 'chat_' + Date.now() + Math.random().toString(36).substr(2, 9);
-            
-            // Redirect to the chat page with the new room ID
-            window.location.href = `/chat.html?room=${roomId}`;
-        });
-    </script>
+    <footer>
+        <h4>Authority: Abdullah Siddique</h4>
+        <h4>Contact: siddiqueabdullah581@gmail.com<br>
+        Github: <strong><a href="https://github.com/Abdullah-Siddique">Abdullah Siddique</a></strong></h4>
+        <p>© 2025 Temporary Chat. All rights reserved.</p>
+    </footer>
 </body>
 </html>

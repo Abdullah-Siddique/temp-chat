@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
         status.textContent = 'Waiting for another person to join...';
     });
 
+    socket.on('startChat', () => {
+        addMessage('Another user has joined the chat.', 'system');
+        enableChat();
+    });
+
     socket.on('userJoined', () => {
         addMessage('Another user has joined the chat.', 'system');
         enableChat();
